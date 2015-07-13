@@ -6,7 +6,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('friends');
+  this.resource('friends', function(){  });
+  this.route('friends', function() {
+    this.route('new');
+  });
 });
 
 export default Router;
