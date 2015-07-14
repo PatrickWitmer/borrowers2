@@ -1,5 +1,7 @@
 <form {{action "save" on="submit"}}>
 
+  <h2>{{errorMessage}}</h2>{{!-- Error message --}}
+
   <p>
     <label>First Name:
       {{input value=model.firstName}}
@@ -23,6 +25,12 @@
       {{input value=model.twitter}}
     </label>
   </p>
+
+  <div>
+    <h2>Friends Details</h2>
+    <p>{{model.firstName}}</p>
+    <p>{{model.lastName}}</p>
+  </div>
 
   <input type="submit" value="Save" />
   <button {{action "cancel"}}>Cancel</button>
