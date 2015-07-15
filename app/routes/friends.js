@@ -16,7 +16,7 @@ export default Ember.Route.extend({
       var _this = this;
 
       friend.destroyRecord().then(function(){
-        _this.transistionTo('friends.index')
+        _this.transitionTo('friends.index');
       });
     }
   }
