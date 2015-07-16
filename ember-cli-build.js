@@ -4,7 +4,6 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
-
   });
 
   // Use `app.import` to add additional libraries to the generated
@@ -20,6 +19,7 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
+<<<<<<< HEAD
   // app.import('vendor/fontello/fontello.css');
   //
   // app.import('vendor/fontello/font/fontello.ttf', {
@@ -41,5 +41,7 @@ module.exports = function(defaults) {
   app.import('bower_components/picnic/releases/plugins.min.css');
   app.import('bower_components/picnic/releases/picnic.css');
 
+=======
+>>>>>>> parent of b10cba3... Final commit of the daytime run
   return app.toTree();
 };
