@@ -1,21 +1,21 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model: function() {
+  model() {
     return this.store.createRecord('article', {
       friend: this.modelFor('friends/show')
     });
   },
   actions: {
-    save: function() {
-      var _this = this;
+    save() {
+
       var model = this.modelFor('articles/new');
 
-      model.save().then(function() {
-        _this.transitionTo('articles');
+      model.save().then(() => {
+        this.transitionTo('articles');
       });
     },
-    cancel: function() {
+    cancel() {
       this.transitionTo('articles');
     }
   }
